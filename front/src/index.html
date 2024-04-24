@@ -3,14 +3,19 @@
 <html lang = 'pt_BR'>
 <head>
     <meta charset="UTF-8">
-    <title> MyTasks - Aprendendo Programação</title>
+    <title> MyTasks - Aprendendo Programação com Javascript</title>
+    <link rel="stylesheet" href="./style.css">
     <script src="https://cdn.jsdelivr.net/npm/axios@1.6.8/dist/axios.min.js"></script>
 </head>
     <body>
+        <h1>Aprendendo Programação - Teste binario</h1>
+
         <label> Digite a pergunta: <input type="text" id="prompt"></label> 
-        <button onclick="enviar()"> Perguntar </button>
+
+        <button onclick="enviar()"> Enviar pergunta </button>
         <input type="text" id="completion">
-        <script>
+
+        <script src="./index.js">
             function enviar(){
                 const pergunta = document.getElementById("prompt").value;
                 axios.post('http://localhost:4000/pergunte-ao-chatgpt', { prompt: pergunta})
@@ -22,5 +27,6 @@
                 })
             }
         </script>
+
     </body>
 </html>
