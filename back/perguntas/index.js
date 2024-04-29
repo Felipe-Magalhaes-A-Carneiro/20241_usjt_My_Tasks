@@ -3,7 +3,7 @@ const app = express();
 
 //Requisições e métodos HTTP do microsserviço de perguntas utilizando o "protocolo HTTP":
 
-// Método HTTP: GET. Padrão de acesso: /perguntas. Corpo: vazio. Atividade: Obter a lista de perguntas.
+// Método HTTP: GET. Padrão de acesso: /perguntas. Corpo: vazio. Atividade: Obter a lista de perguntas
 app.get('/perguntas', (req, res) => { 
 
 });
