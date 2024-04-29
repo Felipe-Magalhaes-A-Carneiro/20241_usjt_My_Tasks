@@ -1,0 +1,22 @@
+.bg-azul{
+    background-color:#5d4fdb;
+}
+
+.font-arial{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+.marginBody {
+    margin-top: 20vh; 
+}
+
+.widthTitle{
+    width: 60%;
+    margin-left: auto;
+    margin-right:auto;
+}
+
+.bg-verde{
+    background-color:#39eb02;
+}
