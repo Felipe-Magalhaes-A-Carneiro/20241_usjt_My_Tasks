@@ -1,41 +1,76 @@
 <!--Aplicação utilzada na aula de segunda-feira-->
 <!DOCTYPE html>
-<html lang = 'pt_BR'>
+<html lang='pt_BR'>
+
 <head>
     <meta charset="UTF-8">
     <title> MyTasks - Aprendendo Programação</title>
     <script src="https://cdn.jsdelivr.net/npm/axios@1.6.8/dist/axios.min.js"></script>
     <style>
         .retangulo {
-            background-color: rgba(15, 15, 24, 0.445); /* cor de fundo do retângulo */
-            height: 100%;
-            margin: 10vh;
-        }
-    
-        #acao{
+            background-color: rgba(15, 15, 24, 0.445);
+            /* cor de fundo do retângulo */
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            padding: 80px;
             text-align: center;
+            border-radius: 10px;
+
+
+        }
+
+        body {
+            background-image: linear-gradient(45deg, rgb(46, 42, 42), rgb(22, 22, 219));
+            font: Arial, sans-serif;
+        }
+
+        #acao {
+            text-align: center;
+            font-size: 210%;
+            margin-top: 0;
+            color:rgb(7, 89, 197);
+            text-decoration: underline;
+        }
+        #completion{
+            margin: 10px;
+            height: 200px;
+            width: 500px;
+        }
+        #prompt {
+            margin-bottom: 10px;
+            height: 30px;
+            width: 300px;
+        }
+        #questionbutton { 
+       padding: 10px;
         }
     </style>
 </head>
-    <body>
-        <div class="retangulo">
-        <label><p id="acao"> Digite a pergunta:</p> <br><input type="text" id="prompt"></label> <br>
+
+<body>
+    <div class="retangulo">
+        <label>
+            <p id="acao"> Digite a pergunta:</p> <br><input type="text" id="prompt">
+        </label> <br>
         <button onclick="enviar()" id="questionbutton"> Perguntar </button> <br>
         <input type="text" id="completion">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        </div>
-        <script>
-            function enviar(){
-                const pergunta = document.getElementById("prompt").value;
-                axios.post('http://localhost:4000/pergunte-ao-chatgpt', { prompt: pergunta})
+    </div>
+    <script>
+        function enviar() {
+            const pergunta = document.getElementById("prompt").value;
+            axios.post('http://localhost:4000/pergunte-ao-chatgpt', { prompt: pergunta })
                 .then(res => {
                     document.getElementById("completion").value = res.data.completion;
                 })
-                .cath(erro =>{
+                .cath(erro => {
                     console.log(erro);
                 })
-            }
-        </script>
-    </body>
+        }
+    </script>
+</body>
+
 </html>
