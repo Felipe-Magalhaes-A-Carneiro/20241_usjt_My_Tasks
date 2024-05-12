@@ -26,10 +26,6 @@ const NavBar = () => {
               <a className="nav-link text-dark" href="#">Respostas</a>
             </li>
 
-            <li className="nav-item">
-              <a className="nav-link disabled text-dark" aria-disabled="true">Suporte</a>
-            </li>
-
           </ul>
         </div>
 
