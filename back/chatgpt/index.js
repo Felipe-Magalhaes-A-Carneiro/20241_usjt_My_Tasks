@@ -1,5 +1,3 @@
-//Aplicação utilizada na aula de segunda-feira
-
 require('dotenv').config();
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 const { OpenAI } = require('openai');
