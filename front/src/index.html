@@ -10,12 +10,12 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
        
 </head>
-<script src="https://cdn.jsdelivr.net/npm/axios@1.6.8/dist/axios.min.js"></script>
-<style>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.8/dist/axios.min.js"></script>
+    <style>
     
     
     .container {
-        background-color: rgba(15, 15, 24, 0.445);
+        background-color: rgba(125, 157, 238, 1);
         /* cor de fundo do retângulo */
         position: fixed;
         left: 50%;
@@ -39,8 +39,11 @@
         text-align: center;
         font-size: 210%;
         margin-top: 0;
-        color: yellow;
+        color: #020202;
         text-decoration: underline;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 50px;
+        font-weight: 50px
     }
 
     #completion {
@@ -49,7 +52,7 @@
         width: 500px;
         border-color: black;
         border: solid 2px;
-
+        border-radius: 12px;
     }
 
     #prompt {
@@ -58,7 +61,7 @@
         width: 300px;
         border-color: black;
         border: solid 2px;
-        
+        border-radius: 12px;
     }
 
     #questionbutton {
@@ -66,19 +69,22 @@
         width: 200px;
         text-decoration: underline;
     }
-</style>
+
+    
+        
+    </style>
 </head>
 
-<body class="text-bg-primary p-3">
+<body class="p-3 mb-2 bg-info-subtle text-info-emphasis">
     
     <div class="container">
         <label>
-            <p id="action"> Digite a pergunta:</p> <br><input type="text" id="prompt">
+            <p id="action"> Digite a pergunta:</p> <br><input type="text" id="prompt" class="fw-bolder">
         </label> <br>
-        <button onclick="enviar()" id="questionbutton" type="button" class="btn btn-outline-warning "> Ver Resposta
+        <button onclick="enviar()" id="questionbutton" type="button" class="btn btn-success btn-lg"> Enviar
         </button> <br>
         <input type="text" id="completion">
-
+        
     </div>
 
     <script>
@@ -88,7 +94,7 @@
                 .then(res => {
                     document.getElementById("completion").value = res.data.completion;
                 })
-                .cath(erro => {
+                .cath (erro => {
                     console.log(erro);
                 })
         }
