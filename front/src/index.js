@@ -2,8 +2,8 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './components/App'
 import 'bootstrap/dist/css/bootstrap.css'
-import './style.css'
-
+import 'style.css'
+import '../node_modules/bootstrap/scss/bootstrap'
 const App = () => {
     return (
         // container principal
