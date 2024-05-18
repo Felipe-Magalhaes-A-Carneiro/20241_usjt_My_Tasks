@@ -1,27 +1,11 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import App from './components/App'
-import 'bootstrap/dist/css/bootstrap.css'
-import 'style.css'
-import '../node_modules/bootstrap/scss/bootstrap'
-const App = () => {
-    return (
-        // container principal
-        <div className="container border rounded mt-2">
-
-            {/* linha para o título */}
-            <div className="row border-bottom m-2">
-                <h1 className="display-5 text-center">Seus pedidos</h1>
-            </div>
-
-
-        </div>
-    )
-
-}
+import 'bootstrap/dist/css/bootstrap.min.css';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
 
 ReactDOM.render(
-    <App />,
-    document.querySelector('#root')
-)
-
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);

@@ -1,106 +1,41 @@
-<!--Aplicação utilzada na aula de segunda-feira-->
 <!DOCTYPE html>
-<html lang='pt_BR'>
- 
-
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title> MyTasks - Aprendendo Programação</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-       
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Input com Glassmorfismo</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    .glassmorphism {
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(10px);
+      padding: 20px;
+      margin: 50px auto;
+      max-width: 400px;
+    }
+    .transparent-input {
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+      color: white;
+      width: 100%;
+      padding: 10px 5px;
+      outline: none;
+    }
+    .transparent-input::placeholder {
+      color: rgba(255, 255, 255, 0.6);
+    }
+  </style>
 </head>
-    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.8/dist/axios.min.js"></script>
-    <style>
-    
-    
-    .container {
-        background-color: rgb(84, 114, 187);
-        /* cor de fundo do retângulo */
-        position: fixed;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        padding: 60px;
-        text-align: center;
-        border-radius: 30px;
-        width: 900px;
-        height: 550px;
-        box-shadow: 20px 20px 20px ;
-     
-    }
+<body class="bg-dark text-white">
+  <div class="glassmorphism">
+    <input type="text" class="transparent-input" placeholder="Digite aqui...">
+  </div>
 
-    .text-bg-primary p-3 body {
-
-        font: Arial, sans-serif;
-    }
-
-    #action {
-        text-align: center;
-        font-size: 210%;
-        margin-top: 0;
-        color: #020202;
-        
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        font-size: 50px;
-        font-weight: 50px
-    }
-
-    #completion {
-        margin: 10px;
-        height: 230px;
-        width: 500px;
-        border-color: black;
-        border: solid 2px;
-        border-radius: 12px;
-    }
-
-    #prompt {
-        margin-bottom: 20px;
-        height: 40px;
-        width: 300px;
-        border-color: black;
-        border: solid 2px;
-        border-radius: 12px;
-    }
-
-    #questionbutton {
-        padding: 10px;
-        width: 200px;
-        text-decoration: underline;
-    }
-
-    body {
-        background-color: aliceblue;
-    }
-        
-    </style>
-</head>
-
-<body>
-    
-    <div class="container">
-        <label>
-            <p id="action"> Digite a pergunta:</p> <br><input type="text" id="prompt" class="fw-bolder">
-        </label> <br>
-        <button onclick="enviar()" id="questionbutton" type="button" class="btn btn-success btn-lg"> Enviar
-        </button> <br>
-        <input type="text" id="completion">
-        
-    </div>
-
-    <script>
-        function enviar() {
-            const pergunta = document.getElementById("prompt").value;
-            axios.post('http://localhost:4000/pergunte-ao-chatgpt', { prompt: pergunta })
-                .then(res => {
-                    document.getElementById("completion").value = res.data.completion;
-                })
-                .cath (erro => {
-                    console.log(erro);
-                })
-        }
-    </script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
-
 </html>
