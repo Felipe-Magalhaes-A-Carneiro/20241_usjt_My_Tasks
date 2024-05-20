@@ -1,5 +1,3 @@
-//Aplicação utilizada na aula de segunda-feira
-
 require('dotenv').config();
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 const { OpenAI } = require('openai');
@@ -14,7 +12,7 @@ app.use(cors());
 app.post('/pergunte-ao-chatgpt' , async (req, res) => {
     const { prompt } = req.body;
     const role = "user";
-    const max_tokens = 50;
+    const max_tokens = 50; //Aumentar o número de caracteres
     const model = 'gpt-3.5-turbo'
     const completion = await openai.chat.completions.create({
         messages: [{role: role, content: prompt}],
