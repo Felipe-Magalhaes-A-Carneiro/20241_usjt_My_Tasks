@@ -1,5 +1,6 @@
 import React from 'react';
 import { TbBrandOpenai } from "react-icons/tb";
+import '../App.css';
 
 function Footer() {
   return (

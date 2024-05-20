@@ -1,6 +1,8 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import '../App.css';
+
 
 const comecarAgora = () => {
   //Função de testes;
@@ -17,7 +19,7 @@ function Home() {
 
       <main className="container my-4 min-vw-100">
         <br />
-        <div className="container text-center ">
+        <div className="container text-center">
           <h1 className=' fw-bold p-4 mb-2 bg-light text-dark rounded widthTitle'>Aprenda Programação com ChatGPT</h1>
 
           <hr />
@@ -28,7 +30,7 @@ function Home() {
             onClick={comecarAgora}> Começe agora! </button>
         </div>
         
-
+        
       </main>
 
       <Footer />

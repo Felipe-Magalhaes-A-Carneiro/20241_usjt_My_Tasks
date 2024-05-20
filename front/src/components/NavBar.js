@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { TbBrandOpenai } from "react-icons/tb";
+import '../App.css';
 
 
 function Navbar() {
@@ -27,7 +28,7 @@ function Navbar() {
             <li className="nav-item">
               <Link className="nav-link" to="/chatgpt">ChatGPT</Link>
             </li>
-
+            {/* Logo da openai */}
             <div className='$spacer * 3' >
               <TbBrandOpenai size={30} />
               <br />

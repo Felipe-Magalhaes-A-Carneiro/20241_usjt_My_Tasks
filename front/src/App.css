@@ -1,5 +1,5 @@
 .bg-azul{
-    /*background-color:#7D9DEE;*/
+    /* background-color:#7D9DEE; */
     background-color: red;
 }
 
@@ -25,3 +25,8 @@
 body {
     background-color: #7D9DEE;
 }
+
+html, body {
+    height: 100%;
+    margin: 0;
+  }
