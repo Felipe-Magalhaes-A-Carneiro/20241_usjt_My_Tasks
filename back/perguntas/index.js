@@ -1,7 +1,7 @@
 const express = require('express');
-app.use(express.json()); //Obs: Diferente da apostila, será usado o json em tudo, logo não terá o 'const bodyParser = require(body-parse);', na página 25 da apostila '03_apostila_microservicoes'
 const app = express();
 const perguntas = {};
+app.use(express.json()); //Obs: Diferente da apostila, será usado o json em tudo, logo não terá o 'const bodyParser = require(body-parse);', na página 25 da apostila '03_apostila_microservicoes'
 contador = 0;
 
 

@@ -6,10 +6,12 @@
     <title> MyTasks - Aprendendo Programação</title>
     <script src="https://cdn.jsdelivr.net/npm/axios@1.6.8/dist/axios.min.js"></script>
 </head>
+
     <body>
         <label> Digite a pergunta: <input type="text" id="prompt"></label> 
         <button onclick="enviar()"> Perguntar </button>
         <input type="text" id="completion">
+
         <script>
             function enviar(){
                 const pergunta = document.getElementById("prompt").value;
@@ -22,5 +24,7 @@
                 })
             }
         </script>
+        
     </body>
+
 </html>
