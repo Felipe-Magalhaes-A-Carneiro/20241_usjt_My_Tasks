@@ -24,6 +24,7 @@ const pool = mysql.createPool({
     connectionLimit: 10,
     //quantos solicitantes podem aguardar na fila? 0 significa que não há limite
     queueLimit: 0
+    
 })
 
 // Endpoint para buscar perguntas e respostas

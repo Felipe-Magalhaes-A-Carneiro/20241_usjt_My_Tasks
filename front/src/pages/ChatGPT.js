@@ -37,7 +37,7 @@ function ChatGPT() {
     //Criar a atualizacao após enviar uma pergunta
     const fetchHistory = async () => {
         try {
-            const res = await fetch('http://localhost:3000/perguntas');
+            const res = await fetch('http://localhost:5000/perguntas');
             const data = await res.json();
             setHistory(data);
         } catch (error) {
