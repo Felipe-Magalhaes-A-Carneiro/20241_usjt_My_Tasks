@@ -68,3 +68,21 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+Observaçoes sobre o projeto:
+
+Na pasta ./back, existe informações sigilosas armazenadas em um "/.env",
+portando, na necessidade de fazer uma apresentação sobre o projeto, lembre-se de criar dois arquivos ".env":
+
+1- Na pasta (1ª) /back/chatgpt e na (2ª) /back/mysql 
+
+1ª:
+
+OPENAI_API_KEY=*sua key dada pela OpenAI*
+
+2ª:
+
+DB_USER=*suas informacoes mysql*
+DB_PASSWORD=*suas informacoes mysql*
+DB_HOST=*suas informacoes mysql*
+DB_DATABASE=mytasks
