@@ -4,10 +4,9 @@ import '../App.css';
 
 function Footer() {
   return (
-    <footer className='min-vw-100 '>
-        <hr />
-    <div className='bg-light '>
-        <div className='container text-center pt-1 '>
+    <footer className='my-5'>
+    <div className='bg-light pb-2'>
+        <div className='container text-center pt-1'>
             <div className='row'>
                 <div className='col'>
                     <p className='text dark fs-5 '>
@@ -18,7 +17,7 @@ function Footer() {
                     </p>
                 </div>
                 <div className='col'>
-                    <p className="brand  text-dark fs-5 " href="#">My.Tasks</p>
+                    <p className="text-dark fs-5 " href="#">My.Tasks</p>
                     <p className='fs-6'>© Copyright - 2024 </p>
                 </div>
                 <div className='col'>
@@ -29,7 +28,6 @@ function Footer() {
             </div>
         </div>
     </div>
-    <hr />
 </footer>
 
   );
