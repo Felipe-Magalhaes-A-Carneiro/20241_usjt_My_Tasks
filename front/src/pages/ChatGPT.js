@@ -42,7 +42,7 @@ function ChatGPT() {
             <div className="container my-4 container text-center min-vw-100">
                 <h1>Estude com o ChatGPT</h1>
                 <hr />
-                <p>Dúvidas? Pergunte :)</p>
+                <p className='fw-bold'>Dúvidas? Pergunte :)</p>
                 <hr />
 
                 <main className="container my-4 ">
@@ -51,7 +51,7 @@ function ChatGPT() {
                     <div class="row justify-content-center w-100 p-3 ">
                         <section class="col-md-8">
                             <article class="card">
-                                <div class="p-5 text-dark-emphasis bg-dark-subtle border border-dark-subtle rounded-3">
+                                <div class="p-5 text-dark-emphasis bg-light border border-dark-subtle rounded-3">
 
 
 
@@ -73,7 +73,7 @@ function ChatGPT() {
                                             onChange={handleQuestionChange}
                                         />
                                         <div className="input-group-append">
-                                            <button className="btn btn-primary" type="button" onClick={handleSendQuestion}>Enviar</button>
+                                            <button className="btn btn-success" type="button" onClick={handleSendQuestion}>Enviar</button>
                                         </div>
                                     </div>
 

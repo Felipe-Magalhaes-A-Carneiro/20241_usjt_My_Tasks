@@ -13,11 +13,11 @@ function Footer() {
                         Contato do Suporte:
                     </p>
                     <p>
-                        <a href='#' className='fs-6'> MyTasksSuporte@gmail.com</a>
+                        <a href='#' className='fs-6'> CodeLearningSuporte@gmail.com</a>
                     </p>
                 </div>
                 <div className='col'>
-                    <p className="text-dark fs-5 " href="#">My.Tasks</p>
+                    <p className="text-dark fs-5 " href="#">CodeLerning</p>
                     <p className='fs-6'>© Copyright - 2024 </p>
                 </div>
                 <div className='col'>
