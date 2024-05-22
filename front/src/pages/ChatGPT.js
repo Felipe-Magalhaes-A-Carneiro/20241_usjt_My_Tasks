@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import '../App.css';
@@ -6,8 +6,9 @@ import '../App.css';
 
 function ChatGPT() {
 
-    const [userQuestion, setUserQuestion] = useState('');
-    const [response, setResponse] = useState('');
+    const [userQuestion, setUserQuestion] = useState(''); //Pergunta
+    const [response, setResponse] = useState(''); //Resposta
+    const [history, setHistory] = useState([]); // Historico com MySQL
 
     const handleQuestionChange = (e) => {
         setUserQuestion(e.target.value);
@@ -27,11 +28,28 @@ function ChatGPT() {
 
             const data = await res.json();
             setResponse(data.completion);
+            fetchHistory(); // Atualiza o histórico após enviar a pergunta
         } catch (error) {
             console.error('Erro ao enviar a pergunta:', error);
         }
     };
 
+    //Criar a atualizacao após enviar uma pergunta
+    const fetchHistory = async () => {
+        try {
+            const res = await fetch('http://localhost:5000/perguntas');
+            const data = await res.json();
+            setHistory(data);
+        } catch (error) {
+            console.error('Erro ao buscar o histórico:', error);
+        }
+    };
+
+    useEffect(() => {
+        fetchHistory();
+    }, [])
+
+    //Pagina web:
     return (
         <div>
 
@@ -72,13 +90,25 @@ function ChatGPT() {
                                             value={userQuestion}
                                             onChange={handleQuestionChange}
                                         />
+
                                         <div className="input-group-append">
                                             <button className="btn btn-primary" type="button" onClick={handleSendQuestion}>Enviar</button>
                                         </div>
                                     </div>
 
 
-
+                                    <div className="my-5">
+                                        <h5>Histórico de Perguntas e Respostas:</h5>
+                                        <ul>
+                                            {history.map((item) => (
+                                                <li key={item.id_pergunta}>
+                                                    <strong>Pergunta:</strong> {item.pergunta} <br />
+                                                    <strong>Resposta:</strong> {item.resposta}
+                                                    <p>{history}</p>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
 
                                 </div>
                             </article>
@@ -87,9 +117,9 @@ function ChatGPT() {
 
                 </main>
             </div>
-
-            <Footer />
-
+            
+            <Footer/>
+        
         </div>
     );
 }

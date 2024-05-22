@@ -29,7 +29,7 @@ function Navbar() {
               <Link className="nav-link" to="/chatgpt">ChatGPT</Link>
             </li>
             {/* Logo da openai */}
-            <div className='$spacer * 3' >
+            <div>
               <TbBrandOpenai size={30} />
               <br />
 
