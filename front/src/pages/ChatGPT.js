@@ -97,7 +97,7 @@ function ChatGPT() {
                                     </div>
 
 
-                                    <div className="mt-5">
+                                    <div className="my-5">
                                         <h5>Histórico de Perguntas e Respostas:</h5>
                                         <ul>
                                             {history.map((item) => (
@@ -116,9 +116,9 @@ function ChatGPT() {
 
                 </main>
             </div>
-
-            <Footer />
-
+            
+            <Footer/>
+        
         </div>
     );
 }
