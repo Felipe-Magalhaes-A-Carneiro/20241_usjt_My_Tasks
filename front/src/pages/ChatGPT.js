@@ -104,6 +104,7 @@ function ChatGPT() {
                                                 <li key={item.id_pergunta}>
                                                     <strong>Pergunta:</strong> {item.pergunta} <br />
                                                     <strong>Resposta:</strong> {item.resposta}
+                                                    <p>{history}</p>
                                                 </li>
                                             ))}
                                         </ul>
