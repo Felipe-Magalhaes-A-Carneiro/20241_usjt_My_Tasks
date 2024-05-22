@@ -24,6 +24,6 @@ app.post('/perguntas', (req, res) => { // na apostila foi usado post, mas com o 
 });
 
 //Porta aberta para que a API 'escute' os dados
-app.listen(4000, () => {
+app.listen(5000, () => {
     console.log('Pergunte ao ChatGPT. Porta 4000')
 });
