@@ -68,7 +68,7 @@ function ChatGPT() {
 
                     {/* Histórico */}
                     <aside className="col-md-3">
-                        <div className="card p-5">
+                        <div className="card p-5 md-5">
                             <h5>Histórico de Perguntas e Respostas:</h5>
                             <hr />
                             <ul>
