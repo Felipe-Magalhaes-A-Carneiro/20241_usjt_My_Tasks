@@ -38,9 +38,10 @@ function ChatGPT() {
     //Criar a atualizacao após enviar uma pergunta
     const fetchHistory = async () => {
         try {
-            const res = await fetch('http://localhost:5000/perguntas');
+            const res = await fetch('http://localhost:3000/perguntas');
             const data = await res.json();
             setHistory(data);
+            console.log(data);
         } catch (error) {
             console.error('Erro ao buscar o histórico:', error);
         }
@@ -66,8 +67,8 @@ function ChatGPT() {
                 <div className="row">
 
                     {/* Histórico */}
-                    <aside className="col-md-6">
-                        <div className="card p-5">
+                    <aside className="col-md-3">
+                        <div className="card p-5 md-5">
                             <h5>Histórico de Perguntas e Respostas:</h5>
                             <hr />
                             <ul>

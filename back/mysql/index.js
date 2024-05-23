@@ -1,10 +1,12 @@
 require('dotenv').config()
+const cors = require('cors')
 const express = require('express')
 //mysql é o nome de uma variável, pode ser qualquer coisa
 //mysql parece mais intuitivo do que mysql2
 const mysql = require('mysql2')
 const app = express()
 app.use(express.json())
+app.use(cors());
 
 // Cada variável fica acessível como uma propriedade do objeto process.env
 const { DB_USER, DB_PASSWORD, DB_HOST, DB_DATABASE } = process.env
