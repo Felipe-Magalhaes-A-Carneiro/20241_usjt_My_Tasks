@@ -17,7 +17,7 @@ function Footer() {
                     </p>
                 </div>
                 <div className='col'>
-                    <p className="text-dark fs-5 " href="#">CodeLerning</p>
+                    <p className="text-dark fs-5 " href="#">CodeLearning</p>
                     <p className='fs-6'>© Copyright - 2024 </p>
                 </div>
                 <div className='col'>

@@ -24,10 +24,10 @@ function Home() {
           <h1 className=' fw-bold p-4 mb-2 bs-success text-dark rounded widthTitle'>Aprenda Programação com ChatGPT</h1>
 
           <hr/>
-          <p className='fw-bold'>Faça perguntas, salve respostas e faça anotações!</p>
+          <p className='fw-bold , titulo2'>Faça perguntas, salve respostas e faça anotações!</p>
           <hr />
           
-          <button type='button' className='w-25 p-4 mb-2btn bg-success btn-lg rounded-pill fw-bold border border-1s my-5'
+          <button type='button' className='w-25 p-4 mb-2btn bg-success btn-lg rounded-pill fw-bold border-black border-3 my-5'
             onClick={comecarAgora}> Começe agora! </button>
         </div>
         
