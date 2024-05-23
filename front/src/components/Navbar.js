@@ -6,7 +6,7 @@ import '../App.css';
 
 function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light min-vw-100">
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
 
       {/* navbar */}
       {/* NOME DO SITE */}
