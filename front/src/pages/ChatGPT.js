@@ -72,15 +72,17 @@ function ChatGPT() {
                             <hr />
                             <ul>
                                 {history.map((item) => (
-                                    <li key={item.id_pergunta}>
-                                        <strong>Pergunta:</strong>
-                                        {item.pergunta}<br />
-                                        <strong>Resposta:</strong>
-                                        {item.resposta}
-                                    </li>
+                                    <ScrollPanel style={{ width: '100%', height: '100px' }} className="custombar2">
+                                        <li key={item.id_pergunta}>
+                                            <strong>Pergunta:</strong>
+                                            <p>{item.pergunta}</p>
+                                            <br />
+                                            <strong>Resposta:</strong>
+                                            <p>{item.resposta}</p>
+                                        </li>
+                                    </ScrollPanel>
                                 ))}
                             </ul>
-
                         </div>
                     </aside>
 
@@ -90,9 +92,9 @@ function ChatGPT() {
                             <div className="p-5 text-dark-emphasis bg-dark-subtle border border-dark-subtle rounded-3">
 
                                 {/* Resposta do ChatGPT */}
+                                <h5>Resposta do ChatGPT:</h5>
                                 {response && (
                                     <ScrollPanel style={{ width: '100%', height: '100px' }} className="custombar1">
-                                        <h5>Resposta do ChatGPT:</h5>
                                         <p>{response}</p>
                                     </ScrollPanel>
                                 )}
