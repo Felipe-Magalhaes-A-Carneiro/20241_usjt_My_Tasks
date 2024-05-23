@@ -9,7 +9,7 @@ function ChatGPT() {
     const [userQuestion, setUserQuestion] = useState('');
     const [response, setResponse] = useState('');
     const [history, setHistory] = useState([]);
-    
+
     const handleQuestionChange = (e) => {
         setUserQuestion(e.target.value);
     };
@@ -28,6 +28,7 @@ function ChatGPT() {
 
             const data = await res.json();
             setResponse(data.completion);
+            fetchHistory(); // Atualizar histórico após enviar a pergunta
         } catch (error) {
             console.error('Erro ao enviar a pergunta:', error);
         }
@@ -88,29 +89,30 @@ function ChatGPT() {
                                             value={userQuestion}
                                             onChange={handleQuestionChange}
                                         />
+                                        {/* Botao */}
                                         <div className="input-group-append">
                                             <button className="btn btn-success" type="button" onClick={handleSendQuestion}>Enviar</button>
                                         </div>
                                     </div>
-
-                                    {/* Histórico de Perguntas e Respostas: */}
-                                    <div className="my-5">
-                                        <h5>Histórico de Perguntas e Respostas:</h5>
-                                        <ul>
-                                            {history.map((item) => (
-                                                <li key={item.id_pergunta}>
-                                                    <strong>Pergunta:</strong> {item.pergunta}<br />
-                                                    <strong>Resposta:</strong> {item.resposta}
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    </div>
-
-
                                 </div>
                             </article>
                         </section>
                     </div>
+                    
+                    {/* Histórico */}
+                    <aside className="col-md-4">
+                        <div className="card p-3">
+                            <h5>Histórico de Perguntas e Respostas:</h5>
+                            <ul>
+                                {history.map((item) => (
+                                    <li key={item.id_pergunta}>
+                                        <strong>Pergunta:</strong> {item.pergunta}<br />
+                                        <strong>Resposta:</strong> {item.resposta}
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    </aside>
 
                 </main>
             </div>
