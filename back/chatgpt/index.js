@@ -6,6 +6,7 @@ const openai = new OpenAI(OPENAI_API_KEY);
 const express = require('express');
 const cors = require('cors');
 const mysql = require('mysql2');
+
 const app = express();
 app.use(express.json());
 app.use(cors());
@@ -35,7 +36,7 @@ app.post('/pergunte-ao-chatgpt', async (req, res) => {
     const role = "user"
     const max_tokens = 50 //Aumentar o número de caracteres
     const model = 'gpt-3.5-turbo'
-    const limit_response = 'Para o seguinte texto, elabore uma resposta com no máximo 50 caractéres'
+    const limit_response = 'Para o seguinte texto, elabore uma resposta com no máximo 200 caractéres'
 
     try {
         const completion = await openai.chat.completions.create({
@@ -61,6 +62,26 @@ app.post('/pergunte-ao-chatgpt', async (req, res) => {
         console.error('Erro na solicitação ao OpenAI:', error);
         res.status(500).json({ error: 'Erro ao gerar resposta!' });
     }
+});
+
+app.get('/historico', (req, res) =>{
+    const sql = `
+    SELECT
+        p.id_pergunta,
+        p.pergunta,
+        r.resposta
+    FROM
+        tb_perguntas p
+    LEFT JOIN
+        tb_respsotas r
+    ON
+        p.id_pergunta = r.id_pergunta`;
+    
+    pool.query(sql,(err, results) =>{
+        if(err) throw err;
+        res.json(results);
+    });
+    
 });
 
 app.listen(4000, () => console.log("ChatGPT_Beckend em execução na porta 4000."));

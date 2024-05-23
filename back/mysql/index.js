@@ -45,4 +45,4 @@ app.get('/perguntas', (req, res) => {
 
 
 const porta = 3000
-app.listen(porta, () => console.log(`Executando. Porta ${porta}`))
+app.listen(porta, () => console.log(`API com MySQL - Executando. Porta ${porta}`))

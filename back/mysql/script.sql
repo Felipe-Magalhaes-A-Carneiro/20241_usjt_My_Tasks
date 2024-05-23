@@ -1,7 +1,7 @@
 -- criar a database
 create database if not exists mytasks;
 -- ou
-create database mytasks;
+-- create database mytasks;
 
 -- informar ao MySQL qual base sobre a qual use schemas usar;
 use mytasks;
@@ -20,6 +20,9 @@ create table if not exists tb_perguntas(
     pergunta varchar(200)
 );
 
+-- remover uma coluna de uma tabela:
+-- ALTER TABLE tb_perguntas DROP COLUMN nome_pergunta;
+
 -- criar tabela de respostas
 create table if not exists tb_respostas(
 	id_respota int primary key auto_increment,
@@ -35,3 +38,4 @@ select * from tb_perguntas;
 
 -- visualizar tabela tb_respostas:
 select * from tb_respostas;
+
