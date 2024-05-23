@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { ScrollPanel } from 'primereact/scrollpanel';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import '../App.css';
@@ -56,66 +57,69 @@ function ChatGPT() {
 
             {/* Corpo do ChatGPT */}
             {/* Titulo */}
-            <div className="container my-4 container text-center min-vw-100">
-                <h1>Estude com o ChatGPT</h1>
+            <div className="container my-4 min-vw-100">
+                <h1 className="text-center">Estude com o ChatGPT</h1>
                 <hr />
-                <p className='fw-bold'>Dúvidas? Pergunte :)</p>
+                <p className="text-center">Dúvidas? Pergunte :)</p>
                 <hr />
 
-                <main className="container my-4 ">
+                <div className="row">
 
-                    {/* Retangulo principal */}
-                    <div class="row justify-content-center w-100 p-3 ">
-                        <section class="col-md-8">
-                            <article class="card">
-                                <div class="p-5 text-dark-emphasis bg-light border border-dark-subtle rounded-3">
-
-
-
-                                    {/* Resposta do ChatGPT */}
-                                    {response && (
-                                        <div className="mt-3">
-                                            <h5>Resposta do ChatGPT:</h5>
-                                            <p>{response}</p>
-                                        </div>
-                                    )}
-
-                                    {/* Input e botão Enviar */}
-                                    <div className="input-group mt-3">
-                                        <input
-                                            type="text"
-                                            className="form-control"
-                                            placeholder="Digite a sua pergunta..."
-                                            value={userQuestion}
-                                            onChange={handleQuestionChange}
-                                        />
-                                        {/* Botao */}
-                                        <div className="input-group-append">
-                                            <button className="btn btn-success" type="button" onClick={handleSendQuestion}>Enviar</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </article>
-                        </section>
-                    </div>
-                    
                     {/* Histórico */}
-                    <aside className="col-md-4">
-                        <div className="card p-3">
+                    <aside className="col-md-6">
+                        <div className="card p-5">
                             <h5>Histórico de Perguntas e Respostas:</h5>
+                            <hr />
                             <ul>
                                 {history.map((item) => (
                                     <li key={item.id_pergunta}>
-                                        <strong>Pergunta:</strong> {item.pergunta}<br />
-                                        <strong>Resposta:</strong> {item.resposta}
+                                        <strong>Pergunta:</strong>
+                                        {item.pergunta}<br />
+                                        <strong>Resposta:</strong>
+                                        {item.resposta}
                                     </li>
                                 ))}
                             </ul>
+
                         </div>
                     </aside>
 
-                </main>
+                    {/* Retangulo principal */}
+                    <main className="col-md-6">
+                        <article className="card">
+                            <div className="p-5 text-dark-emphasis bg-dark-subtle border border-dark-subtle rounded-3">
+
+                                {/* Resposta do ChatGPT */}
+                                {response && (
+                                    <ScrollPanel style={{ width: '100%', height: '100px' }} className="custombar1">
+                                        <h5>Resposta do ChatGPT:</h5>
+                                        <p>{response}</p>
+                                    </ScrollPanel>
+                                )}
+
+                                {/* Input e botão Enviar */}
+                                <div className="input-group mt-3">
+                                    <input
+                                        type="text"
+                                        className="form-control"
+                                        placeholder="Digite a sua pergunta..."
+                                        value={userQuestion}
+                                        onChange={handleQuestionChange}
+                                    />
+                                    {/* Botao */}
+                                    <div className="input-group-append">
+                                        <button
+                                            className="btn btn-success" type="button"
+                                            onClick={handleSendQuestion}>Enviar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </main>
+
+                </div>
             </div>
+
 
             <Footer />
 
