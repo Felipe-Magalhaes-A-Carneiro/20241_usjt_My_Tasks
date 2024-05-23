@@ -8,7 +8,8 @@ function ChatGPT() {
 
     const [userQuestion, setUserQuestion] = useState('');
     const [response, setResponse] = useState('');
-
+    const [history, setHistory] = useState([]);
+    
     const handleQuestionChange = (e) => {
         setUserQuestion(e.target.value);
     };
@@ -32,7 +33,22 @@ function ChatGPT() {
         }
     };
 
+    //Criar a atualizacao após enviar uma pergunta
+    const fetchHistory = async () => {
+        try {
+            const res = await fetch('http://localhost:5000/perguntas');
+            const data = await res.json();
+            setHistory(data);
+        } catch (error) {
+            console.error('Erro ao buscar o histórico:', error);
+        }
+    };
+
+    useEffect(() => {
+        fetchHistory();
+    }, [])
     return (
+
         <div>
 
             <Navbar />
@@ -77,7 +93,18 @@ function ChatGPT() {
                                         </div>
                                     </div>
 
-
+                                    {/* Histórico de Perguntas e Respostas: */}
+                                    <div className="my-5">
+                                        <h5>Histórico de Perguntas e Respostas:</h5>
+                                        <ul>
+                                            {history.map((item) => (
+                                                <li key={item.id_pergunta}>
+                                                    <strong>Pergunta:</strong> {item.pergunta}<br />
+                                                    <strong>Resposta:</strong> {item.resposta}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
 
 
                                 </div>
