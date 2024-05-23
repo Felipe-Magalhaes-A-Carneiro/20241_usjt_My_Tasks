@@ -57,7 +57,7 @@ function ChatGPT() {
 
             {/* Corpo do ChatGPT */}
             {/* Titulo */}
-            <div className="container my-4 min-vw-100">
+            <div className="container my-4 min-vw-100 ">
                 <h1 className="text-center">Estude com o ChatGPT</h1>
                 <hr />
                 <p className="text-center">Dúvidas? Pergunte :)</p>
@@ -90,7 +90,7 @@ function ChatGPT() {
                     {/* ChatGPT - caixa*/}
                     <main className="col-md-6">
                         <article className="card">
-                            <div className="p-5 text-dark-emphasis bg-dark-subtle border border-dark-subtle rounded-3">
+                            <div className="p-5 text-dark-emphasis bg-body border border-dark-subtle rounded-3  ">
 
                                 {/* Resposta do ChatGPT */}
                                 <h5>Resposta do ChatGPT:</h5>

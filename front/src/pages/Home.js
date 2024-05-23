@@ -21,7 +21,7 @@ function Home() {
       <main className="container my-4 min-vw-100">
         <br />
         <div className="container text-center">
-          <h1 className=' fw-bold p-4 mb-2 bs-success text-dark rounded widthTitle'>Aprenda Programação com ChatGPT</h1>
+          <h1 className=' fw-bold $font-family-base p-4 mb-2 bs-success text-dark rounded widthTitle'>Aprenda Programação com ChatGPT</h1>
 
           <hr/>
           <p className='fw-bold'>Faça perguntas, salve respostas e faça anotações!</p>
