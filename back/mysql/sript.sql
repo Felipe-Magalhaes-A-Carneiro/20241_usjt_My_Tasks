@@ -39,3 +39,14 @@ select * from tb_perguntas;
 -- visualizar tabela tb_respostas:
 select * from tb_respostas;
 
+-- visualizar tabela com id_pergunta, pergunta e resposta dada para cada um
+SELECT
+    p.id_pergunta,
+    p.pergunta,
+    r.resposta
+FROM
+    tb_perguntas p
+LEFT JOIN
+    tb_respostas r
+ON
+    p.id_pergunta = r.id_pergunta;

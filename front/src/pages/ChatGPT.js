@@ -72,8 +72,9 @@ function ChatGPT() {
                             <hr />
                             <ul>
                                 {history.map((item) => (
-                                    <ScrollPanel style={{ width: '100%', height: '100px' }} className="custombar2">
-                                        <li key={item.id_pergunta}>
+                                    <ScrollPanel style={{ width: '100%', height: '100px' }} className="custombar2"
+                                        key={item.id_pergunta}>
+                                        <li>
                                             <strong>Pergunta:</strong>
                                             <p>{item.pergunta}</p>
                                             <br />
@@ -86,7 +87,7 @@ function ChatGPT() {
                         </div>
                     </aside>
 
-                    {/* Retangulo principal */}
+                    {/* ChatGPT - caixa*/}
                     <main className="col-md-6">
                         <article className="card">
                             <div className="p-5 text-dark-emphasis bg-dark-subtle border border-dark-subtle rounded-3">
