@@ -13,7 +13,7 @@ app.get('/perguntas', (req, res) => {
 });
 
 // Método HTTP: PUT. Padrão de acesso: /perguntas. Corpo: {texto:string}. Atividade: Criar uma pergunta.
-app.post('/perguntas', (req, res) => { // na apostila foi usado post, mas com o Andeson, usaremos post
+app.post('/perguntas', (req, res) => { // na apostila não foi usado post, mas com o Andeson, usaremos post
     contador++;
     const { texto } = req.body;
     perguntas[contador] = {
@@ -25,5 +25,5 @@ app.post('/perguntas', (req, res) => { // na apostila foi usado post, mas com o 
 
 //Porta aberta para que a API 'escute' os dados
 app.listen(5000, () => {
-    console.log('Pergunte ao ChatGPT. Porta 4000')
+    console.log('Pergunte ao ChatGPT. Porta 5000')
 });

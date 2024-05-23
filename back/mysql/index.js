@@ -24,37 +24,25 @@ const pool = mysql.createPool({
     connectionLimit: 10,
     //quantos solicitantes podem aguardar na fila? 0 significa que não há limite
     queueLimit: 0
+    
 })
 
-// Recebe perguntas do Chat:
+// Endpoint para buscar perguntas e respostas
 app.get('/perguntas', (req, res) => {
-    pool.query('SELECT * FROM tb_perguntas', (err, results, fields) => {
-        res.json(results)
-    })
-
-})
-
-app.post('/perguntas', (req, res) => {
-    const pergunta = req.body.pergunta
-    const sql = "INSERT INTO tb_perguntas (pergunta) VALUES ("
-        + pergunta + "')"
-    pool.query(sql,
-        [pergunta], //placeholders
-        (err, results, fields) => {
-            console.log(results)
-            console.log(fields)
-            res.send('ok')
-        })
-})
-
-
-// Recebe respostas:
-app.get('/respostas', (req, res) => {
-    pool.query('SELECT * FROM tb_respostas', (err, results, fields) => {
-        res.json(results)
-    })
-})
+    const sql = `
+        SELECT p.id_pergunta, p.pergunta, r.resposta
+        FROM tb_perguntas p
+        LEFT JOIN tb_respostas r ON p.id_pergunta = r.id_pergunta
+    `;
+    pool.query(sql, (err, results) => {
+        if (err) {
+            res.status(500).json({ error: 'Erro ao buscar perguntas e respostas' });
+        } else {
+            res.json(results);
+        }
+    });
+});
 
 
 const porta = 3000
-app.listen(porta, () => console.log(`Executando. Porta ${porta}`))
+app.listen(porta, () => console.log(`API com MySQL - Executando. Porta ${porta}`))
