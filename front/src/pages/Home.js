@@ -3,7 +3,9 @@ import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import '../App.css';
-
+import { FaComputer } from "react-icons/fa6";
+import { GiProcessor } from "react-icons/gi";
+          
 
 const comecarAgora = () => {
   //Função de testes;
@@ -27,6 +29,9 @@ function Home() {
           <p className='fw-bold , titulo2'>Faça perguntas, salve respostas e faça anotações!</p>
           <hr />
           
+          <FaComputer size={100} class="rounded float-start mb-6 img-fluid" alt="computer"  />
+          <GiProcessor size={100} class="rounded float-end mb-6 img-fluid" alt="process" />
+
           <button type='button' className='w-25 p-4 mb-2btn bg-success btn-lg rounded-pill fw-bold border-black border-3 my-5'
             onClick={comecarAgora}> Começe agora! </button>
         </div>
