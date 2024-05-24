@@ -65,26 +65,30 @@ function ChatGPT() {
                 <hr />
 
                 <div className="row justify-content-md-center">
-
                     {/* Histórico */}
                     <aside className="col-md-3 mb-5">
                         <div className="card p-4 md-5 mb-5">
+                            
                             <h5>Histórico de Perguntas e Respostas:</h5>
                             <hr />
+
+                            <ScrollPanel style={{ width: '100%', height: '200px' }} className="custombar2">
                             <ul>
                                 {history.map((item) => (
-                                    <ScrollPanel style={{ width: '100%', height: '100px' }} className="custombar2"
-                                        key={item.id_pergunta}>
-                                        <li>
+                                   
+                                    <li key={item.id_pergunta}>
                                             <strong>Pergunta:</strong>
-                                            <p>{item.pergunta}</p>
+                                            <p className="p-1">{item.pergunta}</p>
                                             <br />
                                             <strong>Resposta:</strong>
-                                            <p>{item.resposta}</p>
-                                        </li>
-                                    </ScrollPanel>
+                                            <p className="p-1">{item.resposta}</p>
+                                    </li>
+
                                 ))}
                             </ul>
+                            <hr />
+                            </ScrollPanel>
+
                         </div>
                     </aside>
 
@@ -125,7 +129,9 @@ function ChatGPT() {
             </div>
 
 
-            <Footer />
+        <div class='footer'>
+                    <Footer />
+    </div>
 
         </div>
     );
