@@ -64,11 +64,11 @@ function ChatGPT() {
                 <p className="text-center , titulo2 , fw-bold">Dúvidas? Pergunte :)</p>
                 <hr />
 
-                <div className="row">
+                <div className="row justify-content-md-center">
 
                     {/* Histórico */}
-                    <aside className="col-md-3">
-                        <div className="card p-5 md-5">
+                    <aside className="col-md-3 mb-5">
+                        <div className="card p-4 md-5 mb-5">
                             <h5>Histórico de Perguntas e Respostas:</h5>
                             <hr />
                             <ul>
