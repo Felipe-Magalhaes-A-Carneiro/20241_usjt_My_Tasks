@@ -61,7 +61,7 @@ function ChatGPT() {
             <div className="container my-4 min-vw-100 ">
                 <h1 className="text-center">Estude com o ChatGPT</h1>
                 <hr />
-                <p className="text-center , titulo2 , fw-bold">Dúvidas? Pergunte :)</p>
+                <p className="text-center , titulo2 ">Dúvidas? Pergunte :)</p>
                 <hr />
 
                 <div className="row justify-content-md-center">

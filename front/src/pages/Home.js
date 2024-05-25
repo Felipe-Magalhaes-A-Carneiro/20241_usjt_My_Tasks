@@ -26,7 +26,7 @@ function Home() {
           <h1 className=' fw-bold font-family-base titulo3 p-4 mb-4 bs-success text-dark rounded widthTitle'>Aprenda Programação com ChatGPT</h1>
 
           <hr/>
-          <p className='fw-bold , titulo2'>Faça perguntas, salve respostas e faça anotações!</p>
+          <p className='titulo2'>Faça perguntas, salve respostas e faça anotações!</p>
           <hr />
           
           <FaComputer size={100} class="rounded float-start mb-6 img-fluid" alt="computer"  />
