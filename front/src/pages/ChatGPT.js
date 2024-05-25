@@ -58,8 +58,8 @@ function ChatGPT() {
 
             {/* Corpo do ChatGPT */}
             {/* Titulo */}
-            <div className="container my-4 min-vw-100 ">
-                <h1 className="text-center">Estude com o ChatGPT</h1>
+            <div className="container my-4 min-vw-100 my-5">
+                <h1 className="text-center fw-bolder my-5">Estude com o ChatGPT</h1>
                 <hr />
                 <p className="text-center , titulo2 , fw-bold">Dúvidas? Pergunte :)</p>
                 <hr />
@@ -67,26 +67,26 @@ function ChatGPT() {
                 <div className="row justify-content-md-center">
                     {/* Histórico */}
                     <aside className="col-md-3 mb-5">
-                        <div className="card p-4 md-5 mb-5">
-                            
+                        <div className="card p-4 md-5 mb-5 my-5">
+
                             <h5>Histórico de Perguntas e Respostas:</h5>
                             <hr />
 
                             <ScrollPanel style={{ width: '100%', height: '200px' }} className="custombar2">
-                            <ul>
-                                {history.map((item) => (
-                                   
-                                    <li key={item.id_pergunta}>
+                                <ul>
+                                    {history.map((item) => (
+
+                                        <li key={item.id_pergunta}>
                                             <strong>Pergunta:</strong>
                                             <p className="p-1">{item.pergunta}</p>
                                             <br />
                                             <strong>Resposta:</strong>
                                             <p className="p-1">{item.resposta}</p>
-                                    </li>
+                                        </li>
 
-                                ))}
-                            </ul>
-                            <hr />
+                                    ))}
+                                </ul>
+                                <hr />
                             </ScrollPanel>
 
                         </div>
@@ -94,7 +94,7 @@ function ChatGPT() {
 
                     {/* ChatGPT - caixa*/}
                     <main className="col-md-6">
-                        <article className="card mb-5">
+                        <article className="card mb-5 my-5">
                             <div className="p-5 text-dark-emphasis bg-body border border-dark-subtle rounded-3  ">
 
                                 {/* Resposta do ChatGPT */}
@@ -129,9 +129,9 @@ function ChatGPT() {
             </div>
 
 
-        <div class='footer'>
-                    <Footer />
-    </div>
+            <div class='footer'>
+                <Footer />
+            </div>
 
         </div>
     );

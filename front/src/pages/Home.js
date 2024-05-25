@@ -32,11 +32,15 @@ function Home() {
           <FaComputer size={100} class="rounded float-start mb-6 img-fluid" alt="computer" />
           <GiProcessor size={100} class="rounded float-end mb-6 img-fluid" alt="process" />
 
-          <button type='button' className='w-25 p-4 mb-2btn bg-success btn-lg rounded-pill fw-bold border-black border-3 my-5'
-            onClick={comecarAgora}> Começe agora! </button>
+            <Link to = "/chatgpt">
+            <button type='button' className='w-25 p-4 mb-2 btn bg-success btn-lg rounded-pill fw-bold border-black border-3 my-5'>
+              Comece agora!
+            </button>
+          </Link>
+
+          <p className='font-family-base titulo3 p-5 rounded widthTitle fs-4'>Bem-vindo ao nosso portal de aprendizado de programação! Aqui, você pode conversar com o ChatGPT para esclarecer dúvidas, receber explicações detalhadas e obter ajuda personalizada em tempo real. Aproveite essa ferramenta inteligente para aprimorar suas habilidades de programação de maneira prática e eficiente.</p>
+
         </div>
-
-
       </main>
 
       <div class='footer'>
