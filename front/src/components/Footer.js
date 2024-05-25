@@ -4,7 +4,7 @@ import '../App.css';
 
 function Footer() {
   return (
-<footer>
+<footer className='fixed-bottom'>
     <div className='bg-light pb-2'>
         <div className='container text-center pt-1'>
             <div className='row'>
@@ -13,11 +13,11 @@ function Footer() {
                         Contato do Suporte:
                     </p>
                     <p>
-                        <a href='#' className='fs-6'> CodeLearningSuporte@gmail.com</a>
+                        <a href='#' className='fs-6'> DevHelperAISuporte@gmail.com</a>
                     </p>
                 </div>
                 <div className='col'>
-                    <p className="text-dark fs-5 " href="#">CodeLearning</p>
+                    <p className="text-dark fs-5 " href="#">DevHelper AI</p>
                     <p className='fs-6'>© Copyright - 2024 </p>
                 </div>
                 <div className='col'>

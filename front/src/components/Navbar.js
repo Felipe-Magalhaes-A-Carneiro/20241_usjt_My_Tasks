@@ -11,7 +11,7 @@ function Navbar() {
       {/* navbar */}
       {/* NOME DO SITE */}
       <div className="container-fluid">
-        <Link className="navbar-brand" to="/">DevHelper AI</Link>
+        <Link className="navbar-brand " to="/"><strong>DevHelper AI</strong></Link>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
@@ -22,17 +22,16 @@ function Navbar() {
           <ul className="navbar-nav">
             {/* home */}
             <li className="nav-item">
-              <Link className="nav-link" to="/">Home</Link>
+              <Link className="nav-link" to="/"><u>Home</u></Link>
             </li>
             {/* ChatGPT */}
             <li className="nav-item">
-              <Link className="nav-link" to="/chatgpt">ChatGPT</Link>
+              <Link className="nav-link" to="/chatgpt"><u>ChatGPT</u></Link>
             </li>
             {/* Logo da openai */}
-            <div >
-              <TbBrandOpenai size={30} />
+            <div>
+              <TbBrandOpenai size={30} class="position-relative position-absolute top-30 end-0 mx-3 my-1" alt="openai" />
               <br />
-            
 
             </div>
 
