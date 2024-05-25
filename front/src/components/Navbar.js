@@ -29,8 +29,8 @@ function Navbar() {
               <Link className="nav-link" to="/chatgpt"><u>ChatGPT</u></Link>
             </li>
             {/* Logo da openai */}
-            <div>
-              <TbBrandOpenai size={30} class="position-relative position-absolute top-30 end-0 mx-3 my-1" alt="openai" />
+            <div >
+              <TbBrandOpenai size={30} class="position-relative position-absolute top-30 end-0 mx-3 m-1"/>
               <br />
 
             </div>

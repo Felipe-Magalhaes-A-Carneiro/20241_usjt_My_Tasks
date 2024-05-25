@@ -34,7 +34,7 @@ const pool = mysql.createPool({
 app.post('/pergunte-ao-chatgpt', async (req, res) => {
     const { prompt } = req.body
     const role = "user"
-    const max_tokens = 50 //Aumentar o número de caracteres
+    const max_tokens = 200 //Aumentar o número de caracteres
     const model = 'gpt-3.5-turbo'
     const limit_response = 'Para o seguinte texto, elabore uma resposta com no máximo 200 caractéres'
 
