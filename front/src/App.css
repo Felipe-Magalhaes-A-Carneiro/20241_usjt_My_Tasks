@@ -42,3 +42,7 @@ html, body {
     bottom: 0;
     width: 100%;
   }
+  
+  .belgrano-font {
+    font-family: 'Belgrano', serif;
+  }

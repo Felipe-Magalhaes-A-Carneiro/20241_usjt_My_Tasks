@@ -6,15 +6,6 @@ import '../App.css';
 import { FaComputer } from "react-icons/fa6";
 import { GiProcessor } from "react-icons/gi";
 
-
-const comecarAgora = () => {
-  //Função de testes;
-  if (window.confirm("Pronto para iniciar seu aprendizado?")) {
-    window.open("https://chat.openai.com/");
-  }
-
-}
-
 function Home() {
   return (
     <div>
