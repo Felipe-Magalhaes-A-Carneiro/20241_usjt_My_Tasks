@@ -1,20 +1,20 @@
-require('dotenv').config();
-const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
-const { OpenAI } = require('openai');
-const openai = new OpenAI(OPENAI_API_KEY);
+require('dotenv').config(); // Carrega as variáveis de ambiente do arquivo .env
+const OPENAI_API_KEY = process.env.OPENAI_API_KEY; //Obtém a chave da API do OpenAI do arquivo .env
+const { OpenAI } = require('openai'); //Importa a biblioteca OpenAI
+const openai = new OpenAI(OPENAI_API_KEY); // Inicializa a instância do OpenAI com a chave da API
 
-const express = require('express');
-const cors = require('cors');
-const mysql = require('mysql2');
+const express = require('express'); //Importa o framework Express.
+const cors = require('cors'); //Importa o middleware CORS para permitir requisições entre diferentes origens.
+const mysql = require('mysql2'); // Importa a biblioteca MySQL2 para interagir com o banco de dados MySQL.
 
 const app = express();
-app.use(express.json());
+app.use(express.json()); //Usa middleware para processar requisições com corpo em JSON
 app.use(cors());
 
 // Cada variável fica acessível como uma propriedade do objeto process.env
 const { DB_USER, DB_PASSWORD, DB_HOST, DB_DATABASE } = process.env
 
-//Criar pool de conexoes
+//Cria um pool de conexões com o banco de dados com configurações específicas
 const pool = mysql.createPool({
     host: DB_HOST,
     user: DB_USER,
@@ -31,13 +31,15 @@ const pool = mysql.createPool({
     queueLimit: 0
 })
 
+// Define um endpoint POST para fazer perguntas ao ChatGPT.
 app.post('/pergunte-ao-chatgpt', async (req, res) => {
     const { prompt } = req.body
     const role = "user"
-    const max_tokens = 200 //Aumentar o número de caracteres
-    const model = 'gpt-3.5-turbo'
-    const limit_response = 'Para o seguinte texto, elabore uma resposta com no máximo 200 caractéres'
+    const max_tokens = 200 //Controla o número de caracteres e será alterado pelo 'limit_response'
+    const model = 'gpt-3.5-turbo' // Versão do ChatGPT
+    const limit_response = 'Para o seguinte texto, elabore uma resposta com no máximo 200 caractéres' // Criado para mandar uma mensagem ao OpenAI Obs.: que não é obrigatorio
 
+    // Faz a solicitação à API do OpenAI.:
     try {
         const completion = await openai.chat.completions.create({
             messages: [{ role: role, content: `${limit_response}: "${prompt}"` }],
@@ -45,13 +47,16 @@ app.post('/pergunte-ao-chatgpt', async (req, res) => {
             max_tokens: max_tokens
         });
 
-        const responseText = completion.choices[0].message.content;
+        //Extrai a resposta do OpenAI.
+        const responseText = completion.choices[0].message.content; //
 
-        // Armazenar pergunta e resposta no banco de dados
+        //Armazena a pergunta no banco de dados
         pool.query('INSERT INTO tb_perguntas (pergunta) VALUES (?)', [prompt], (err, results) => {
             if (err) throw err;
 
+            //Obtém o ID da pergunta inserida
             const perguntaId = results.insertId;
+            //Armazena a resposta no banco de dados
             pool.query('INSERT INTO tb_respostas (id_pergunta, resposta) VALUES (?, ?)', [perguntaId, responseText], (err) => {
                 if (err) throw err;
             });
@@ -64,7 +69,8 @@ app.post('/pergunte-ao-chatgpt', async (req, res) => {
     }
 });
 
-app.get('/historico', (req, res) =>{
+//Define um endpoint GET para obter o histórico de perguntas e respostas.
+app.get('/historico', (req, res) => {
     const sql = `
     SELECT
         p.id_pergunta,
@@ -75,13 +81,15 @@ app.get('/historico', (req, res) =>{
     LEFT JOIN
         tb_respsotas r
     ON
-        p.id_pergunta = r.id_pergunta`;
-    
-    pool.query(sql,(err, results) =>{
-        if(err) throw err;
+        p.id_pergunta = r.id_pergunta`; //Define a query SQL para buscar as perguntas e respostas
+
+    //Executa a query SQL e retorna os resultados como JSON.
+    pool.query(sql, (err, results) => {
+        if (err) throw err;
         res.json(results);
     });
-    
+
 });
 
+//Inicializa o servidor na porta 4000
 app.listen(4000, () => console.log("ChatGPT_Beckend em execução na porta 4000."));
