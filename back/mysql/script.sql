@@ -25,12 +25,15 @@ create table if not exists tb_perguntas(
 
 -- criar tabela de respostas
 create table if not exists tb_respostas(
-	id_respota int primary key auto_increment,
+	id_resposta int primary key auto_increment,
     id_pergunta int,
     resposta varchar(200),
-    foreign key (id_pergunta) references tb_perguntas(id_pergunta)
+    foreign key (id_pergunta) references tb_perguntas(id_pergunta) 
 );
 
+--altera coluna
+ALTER TABLE tb_perguntas
+ADD COLUMN data_pergunta TIMESTAMP DEFAULT CURRENT_TIMESTAMP;
 -- visualizar tabela:
 -- select * from tb_usuario;
 -- visualizar tabela tb_perguntas:
@@ -43,10 +46,12 @@ select * from tb_respostas;
 SELECT
     p.id_pergunta,
     p.pergunta,
-    r.resposta
+    r.resposta, 
+    DATE_FORMAT(p.data_pergunta, '%d/%m/%Y %H:%i:%s') AS data_formatada
 FROM
     tb_perguntas p
 LEFT JOIN
     tb_respostas r
 ON
-    p.id_pergunta = r.id_pergunta;
+    p.id_pergunta = r.id_pergunta
+    order by r.id_resposta desc;

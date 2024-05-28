@@ -41,7 +41,7 @@ function ChatGPT() {
 
     const fetchHistory = async () => {
         try {
-            const res = await fetch('http://localhost:3000/perguntas');
+            const res = await fetch('http://localhost:4000/historico');
             const data = await res.json();
             setHistory(Array.isArray(data) ? data : []);
             console.log(data);
@@ -58,37 +58,53 @@ function ChatGPT() {
     return (
         <div>
             <Navbar />
-            <div className="container my-4 min-vw-100 my-5">
-                <h1 className="text-center fw-bolder my-5">Estude com o ChatGPT</h1>
-                <hr />
-                <p className="text-center titulo2">Dúvidas? Pergunte :)</p>
-                <hr />
+            <div className="container my-4 min-vw-100 my-5 text-center">
+                <span  className=' fs-3 fw-bold my-5 mb-4 mt-4 p-3 text-dark text-bg-light rounded widthTitle btn border-black border-3'>
+                    Estude com o ChatGPT
+                </span >   
+                <br/>
+                <span className='titulo2 fs-6 fw-bold my-5 mb-4 mt-4 p-3 text-ligth text-bg-dark rounded btn border-white border-2'>
+                    Dúvidas? Pergunte :)
+                </span >
+                <br/>
                 <div className="row justify-content-md-center">
-                    <aside className="col-md-3 mb-5">
-                        <div className="card p-5 md-5 mb-5 my-5">
-                            <h5>Histórico de Perguntas e Respostas:</h5>
-                            <hr />
+                    
+                    <aside className="col-md-3 mb-5 ">
+                        <div className="card p-4 md-5 mb-5 my-5 border-black border-2">
+                        <span style={{ width: '100%'}} 
+                              className='titulo2 fs-6 fw-bold text-dark text-bg-ligth rounded btn border-black border-2'>
+                        Histórico de Perguntas e Respostas:
+                        </span > 
+                            <hr />  
                             <ScrollPanel style={{ width: '100%', height: '300px' }} className="custombar2">
                                 <ul>
                                     {history.map((item) => (
-                                        <li key={item.id_pergunta}>
-                                            <strong>Pergunta:</strong>
-                                            <p className="p-1">{item.pergunta}</p>
-                                            <br />
-                                            <strong>Resposta:</strong>
-                                            <p className="p-1">{item.resposta}</p>
-                                        </li>
+                                        <div key={item.id_pergunta}>
+                                           <div class="bg-success-subtle card text-success-emphasis" role="alert">
+                                                <strong className="labelPerguntaHistorico card-header">Resposta:</strong>
+                                                <span className="p-1 conteudoRetornado">{item.resposta}</span>
+                                                <p className="dataPergunta">{item.data_pergunta}</p>
+                                            </div>
+                                            <br/>
+                                            <div class="bg-primary-subtle card text-primary-emphasis" role="alert">   
+                                                <strong className="labelPerguntaHistorico card-header">Pergunta:</strong>
+                                                <span className="p-1 conteudoRetornado">{item.pergunta}</span>
+                                                <p className="dataPergunta">{item.data_pergunta}</p>
+                                            </div> 
+                                            <br/>
+                                        </div>
                                     ))}
                                 </ul>
                             </ScrollPanel>
                         </div>
                     </aside>
-                    <main className="col-md-6">
+
+                    <main className="col-md-6 ">
                         <article className="card mb-5 my-5">
                             <div className="p-5 text-dark-emphasis bg-body border border-dark-subtle rounded-3">
                                 <h5>Resposta do ChatGPT:</h5>
                                 {response && (
-                                    <ScrollPanel style={{ width: '100%', height: '100px' }} className="custombar1">
+                                    <ScrollPanel style={{ width: '100%', height: 'auto' }} className="custombar1">
                                         <p>{response}</p>
                                     </ScrollPanel>
                                 )}

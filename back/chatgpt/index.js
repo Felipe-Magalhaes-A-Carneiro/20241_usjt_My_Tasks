@@ -72,16 +72,14 @@ app.post('/pergunte-ao-chatgpt', async (req, res) => {
 //Define um endpoint GET para obter o histórico de perguntas e respostas.
 app.get('/historico', (req, res) => {
     const sql = `
-    SELECT
-        p.id_pergunta,
-        p.pergunta,
-        r.resposta
-    FROM
-        tb_perguntas p
-    LEFT JOIN
-        tb_respsotas r
-    ON
-        p.id_pergunta = r.id_pergunta`; //Define a query SQL para buscar as perguntas e respostas
+    SELECT p.id_pergunta,
+           p.pergunta,
+           r.resposta,
+           DATE_FORMAT(p.data_pergunta, '%d/%m/%Y %H:%i:%s') AS data_pergunta
+      FROM tb_perguntas p
+      LEFT JOIN tb_respostas r
+      ON p.id_pergunta = r.id_pergunta
+      ORDER BY p.id_pergunta DESC`; //Define a query SQL para buscar as perguntas e respostas
 
     //Executa a query SQL e retorna os resultados como JSON.
     pool.query(sql, (err, results) => {

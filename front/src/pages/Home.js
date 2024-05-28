@@ -18,11 +18,11 @@ function Home () {
             Aprenda Programação com ChatGPT
           </span > 
           
-          <hr />
-          <span  className='fs-6 fw-bold my-5 mb-4 mt-4 p-3 text-ligth text-bg-dark rounded btn border-white border-2'>
+          <br/><br/>
+          <span  className='titulo2 fs-6 fw-bold my-5 mb-4 mt-4 p-3 text-ligth text-bg-dark rounded btn border-white border-2'>
             Faça perguntas, salve respostas e faça anotações!
           </span >
-          <hr />
+          <br/>
 
           <FaComputer
             size={100}
