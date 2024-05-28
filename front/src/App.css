@@ -23,7 +23,8 @@
 }
 
 body {
-    background-color: #7D9DEE;
+    /* background-color: #7D9DEE; */
+    background-color:#648ef9;
 }
 
 html, body {
@@ -35,12 +36,6 @@ html, body {
     font-style: italic;
     color: black;
     font-size: large;
-  }
-
-  .footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
   }
   
   .belgrano-font {
