@@ -20,7 +20,7 @@ function Footer() {
                     <p className="text-dark fs-5 my-3 " href="#"><strong>DevHelper AI</strong></p>
                     <p className='fs-6 my-4'><strong>© Copyright - 2024</strong> </p>
                 </div>
-                <div className='col my-2'>
+                <div className='col my-3'>
                     <TbBrandOpenai size={40} />
                     <br />
                     <p className='fs-5'><strong>OpenAI</strong></p>
