@@ -15,7 +15,7 @@ function Home () {
         <br />
         <div className='container text-center'> 
           <span  className='fs-3 fw-bold my-5 mb-4 mt-4 p-3 text-dark text-bg-light rounded widthTitle btn border-black border-3'>
-            Aprenda Programação com ChatGPT
+            Aprenda Programação com DevHelper AI
           </span > 
           
           <br/><br/>
