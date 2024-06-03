@@ -10,17 +10,50 @@ function Home () {
     const integrantes = {
         dadosIntegrantes: [
             {
-                name: 'Felipe',
+                name: 'Felipe Magalhães de Araujo Carneiro',
                 funcao: 'Desenvolvedor Back-End',
-                registroAluno: '123',
-                foto: 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAJQArwMBIgACEQEDEQH/xAAbAAEAAgMBAQAAAAAAAAAAAAAABAUBAgYDB//EADQQAAIBAwIDBgQFBAMAAAAAAAABAgMEEQUhEjFREzJBYXGRIlKBoUJicrHwFNHh8TM0wf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwD7iAAAAAAAAYbwsvkZIGsVuytHFd6o+H6eIFdqN9K4m4QbVJPH6vMhD1AAAAb0qk6VRTpyakvE6Gxu1dUeLGJraS6HNknT67oXUX+GT4ZLyA6QAAAAAAAAAAAAAAAAAACn1970Y+GG/wBi4KbXsdrRT+VgVYAAAAAMcwAOotpcdClL5oJ/Y9SNp8oys6PC08QUXjqiSAAAAAAAAAAAAAAAAAOe1Vt308vklj2OgZQaysXrfWKYEIAAAAAAAF3of/Vn+t/siyK7Q1i1k+s2WIAAAAAAAAAAAAAAAAArNatlOl/UJ/FBYa6rJZmlWmqtOUJLaSwwOVBvWpSoVJU5reLx6mgAAADMVxTjHq8GCVp1CVa7ht8EHxSYF5Z26tqKpp53y35nuAAAAAAAAAAAAAAxKSisyaX1AyCPO9tqeeKtH0TyRqmr28V8CnP0WALEr7jVaNJuNNOpJbbbL3ItbWJzi406Sjlc29ysAkXlzK7mpypxTivAjnvZcLuYwn3anwP6/wAQurWpazxU3i+7LwYHgAABJsrudpKTjDijLGU9jyoUZ16ip01lvn5HpfqMK3Y0+7TXDnq/EC3oapb1WlJunL83L3JqaaynlHJk/Tb927VOq80nyfy/4AvgeFO7t57RrQb6cR78wAAAAAAAAKbVb6Xa9jQm0o95p+PQrJNy3m3J+byet4l/V1v1y/c8QAAAAADMW4TU1zTydKuzvLZOSUoTXLoc0WWkV5unUt4tKeMwz4dQI11ZqlWlGFam0vCUsNEmy0tVUqlaonHwUHn7lbNPjfH38viz1LLR3XjxyW9Jc15+QFm1TtLeThCMYxWdjmpNyk5S5vdlzrdZK3jSzvN7+iKUAAADNoznDuTlH0eDUATKOo3NJ7z449Jk+hq1Ge1WMqb680UgA6yLUllbpmSBo03OzSbzwycUTwBpUmqcJTfKKyzcg6xV7Ozkk95vh/uBRTm5zlN85NtmoAAAAAAAJWmz4b6l5vBFNqcuCrCa/DJP2YEnUpUneVeCLznDaezeOmC406VOVnT7NYWMNeZz9VYqzTecSe5O0e57KVSE38HC5/VAeerVe0vGlyguEhGXKU5OUucnlmAAAAAAAAALnQp5o1YdJZ9/9FoUehTxcTh4SiXgApNbq8deFNPuLL9WXb2OXuKnbV6lT5pP28APIAAAAAAAAAMD0r71W/mSl7pCltTqy/Kor1b/ALJmJ7wpv8uPuZfw0Ir5pZ9kB5gAAAAAAAAACVps+C+pPq8e50ZylOXBUhNfhkmdVF5WwEbUavZWdSS5tcK+pzhba5V3p0l+plSAAAAAAAAADAA2f/EvKRmquHghzxFfff8A9NVvGS9H/Pc2rPNWfrgDQAAAAAAAAAAHyOmsp9paUZeLgs+pzJd6JV4reVPm4S+zArtUk531XP4cJexFAAAAAAAAAAAADan30YMAAAAAAAAAAAABYaLJq7cfCUHkAD//2Q=='
+                registroAluno: '823119685',
+                foto: 'https://avatars.githubusercontent.com/u/111382377?v=4https://media.licdn.com/dms/image/sync/D4D27AQEarNu0KEDG_g/articleshare-shrink_480/0/1712862278930?e=1718060400&v=beta&t=mcwbimiL7SAoS12epxTU9777D8oTBTPJsCiSr7qElNo'
             },
             {
                 name: 'Murilo Matos Bernardo',
                 funcao: 'Desenvolvedor Full-stack',
                 registroAluno: '823132278',
-                foto: 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAJQArwMBIgACEQEDEQH/xAAbAAEAAgMBAQAAAAAAAAAAAAAABAUBAgYDB//EADQQAAIBAwIDBgQFBAMAAAAAAAABAgMEEQUhEjFREzJBYXGRIlKBoUJicrHwFNHh8TM0wf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwD7iAAAAAAAAYbwsvkZIGsVuytHFd6o+H6eIFdqN9K4m4QbVJPH6vMhD1AAAAb0qk6VRTpyakvE6Gxu1dUeLGJraS6HNknT67oXUX+GT4ZLyA6QAAAAAAAAAAAAAAAAAACn1970Y+GG/wBi4KbXsdrRT+VgVYAAAAAMcwAOotpcdClL5oJ/Y9SNp8oys6PC08QUXjqiSAAAAAAAAAAAAAAAAAOe1Vt308vklj2OgZQaysXrfWKYEIAAAAAAAF3of/Vn+t/siyK7Q1i1k+s2WIAAAAAAAAAAAAAAAAArNatlOl/UJ/FBYa6rJZmlWmqtOUJLaSwwOVBvWpSoVJU5reLx6mgAAADMVxTjHq8GCVp1CVa7ht8EHxSYF5Z26tqKpp53y35nuAAAAAAAAAAAAAAxKSisyaX1AyCPO9tqeeKtH0TyRqmr28V8CnP0WALEr7jVaNJuNNOpJbbbL3ItbWJzi406Sjlc29ysAkXlzK7mpypxTivAjnvZcLuYwn3anwP6/wAQurWpazxU3i+7LwYHgAABJsrudpKTjDijLGU9jyoUZ16ip01lvn5HpfqMK3Y0+7TXDnq/EC3oapb1WlJunL83L3JqaaynlHJk/Tb927VOq80nyfy/4AvgeFO7t57RrQb6cR78wAAAAAAAAKbVb6Xa9jQm0o95p+PQrJNy3m3J+byet4l/V1v1y/c8QAAAAADMW4TU1zTydKuzvLZOSUoTXLoc0WWkV5unUt4tKeMwz4dQI11ZqlWlGFam0vCUsNEmy0tVUqlaonHwUHn7lbNPjfH38viz1LLR3XjxyW9Jc15+QFm1TtLeThCMYxWdjmpNyk5S5vdlzrdZK3jSzvN7+iKUAAADNoznDuTlH0eDUATKOo3NJ7z449Jk+hq1Ge1WMqb680UgA6yLUllbpmSBo03OzSbzwycUTwBpUmqcJTfKKyzcg6xV7Ozkk95vh/uBRTm5zlN85NtmoAAAAAAAJWmz4b6l5vBFNqcuCrCa/DJP2YEnUpUneVeCLznDaezeOmC406VOVnT7NYWMNeZz9VYqzTecSe5O0e57KVSE38HC5/VAeerVe0vGlyguEhGXKU5OUucnlmAAAAAAAAALnQp5o1YdJZ9/9FoUehTxcTh4SiXgApNbq8deFNPuLL9WXb2OXuKnbV6lT5pP28APIAAAAAAAAAMD0r71W/mSl7pCltTqy/Kor1b/ALJmJ7wpv8uPuZfw0Ir5pZ9kB5gAAAAAAAAACVps+C+pPq8e50ZylOXBUhNfhkmdVF5WwEbUavZWdSS5tcK+pzhba5V3p0l+plSAAAAAAAAADAA2f/EvKRmquHghzxFfff8A9NVvGS9H/Pc2rPNWfrgDQAAAAAAAAAAHyOmsp9paUZeLgs+pzJd6JV4reVPm4S+zArtUk531XP4cJexFAAAAAAAAAAAADan30YMAAAAAAAAAAAABYaLJq7cfCUHkAD//2Q=='
+                foto: 'https://media.licdn.com/dms/image/D4D03AQGcDTavO8BmWQ/profile-displayphoto-shrink_800_800/0/1709588490055?e=1723075200&v=beta&t=y-MhoI01ysmobolaALp6ap1DB7CihwzFYYq65Nq8T_o'
             },
+            {
+              name: 'Fadel Abbas Mzannar',
+              funcao: 'Desenvolvedor Front-End',
+              registroAluno: '823155706',
+              foto: 'https://avatars.githubusercontent.com/u/164114940?s=400&u=ccd587380b8c236d4730b2b03f134e38f79eb0db&v=4'
+          },
+          {
+            name: 'Gustavo Evangelista Cardoso',
+            funcao: 'Desenvolvedor Front-End',
+            registroAluno: '823129532',
+            foto: 'https://media.licdn.com/dms/image/D4D03AQHOAGe_7oPnDw/profile-displayphoto-shrink_800_800/0/1714087117333?e=1723075200&v=beta&t=ETdpe_8g69whXWR6FUXT2M5qSkfw9Ysb7USVsBjkOIM'
+        },
+        {
+          name: 'Felipe Soares Lima',
+          funcao: 'Desenvolvedor Front-End',
+          registroAluno: '823127421',
+          foto: 'https://media.licdn.com/dms/image/D4D03AQGtio2RHi-QcQ/profile-displayphoto-shrink_200_200/0/1692134231757?e=1723075200&v=beta&t=XZjBY-76LOOOBk7YNerrBGhnMyxmuuA_XfWTHj_lOHM'
+      },
+      {
+        name: 'Analice Souza de Almeida Silva',
+        funcao: 'Desenvolvedor Front-End',
+        registroAluno: '823115451',
+        foto: 'https://avatars.githubusercontent.com/u/165851141?v=4'
+    },
+    {
+      name: 'Lucas Cezar Alcala Zenteno',
+      funcao: 'Desenvolvedor Front-End ',
+      registroAluno: '823144811',
+      foto:'https://media.licdn.com/dms/image/D4D03AQG37LSQ55ga0w/profile-displayphoto-shrink_100_100/0/1717457666699?e=1723075200&v=beta&t=Ki_SoubVqQVOfHNGsGhWxDRVua1y032A6bKGQIa06Gk'
+  },
+
+
+
         ]
     }
 
