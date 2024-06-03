@@ -59,21 +59,17 @@ function ChatGPT() {
         <div>
             <Navbar />
             <div className="container my-4 min-vw-100 my-5 text-center">
-                <span  className=' fs-3 fw-bold my-5 mb-4 mt-4 p-3 text-dark text-bg-light rounded widthTitle btn border-black border-3'>
+                <span  className=' fs-3 fw-bold my-5 mb-4 mt-4 p-3 text-dark text-bg-light rounded widthTitle badge border-black border-3'>
                     Estude com o ChatGPT
                 </span >   
-                <br/>
-                <span className='titulo2 fs-6 fw-bold my-5 mb-4 mt-4 p-3 text-ligth text-bg-dark rounded btn border-white border-2'>
-                    Dúvidas? Pergunte :)
-                </span >
                 <br/>
                 <div className="row justify-content-md-center">
                     
                     <aside className="col-md-3 mb-5 ">
-                        <div className="card p-4 md-5 mb-5 my-5 border-black border-2">
+                        <div className="card p-4 md-5 mb-5 my-5 ">
                         <span style={{ width: '100%'}} 
-                              className='titulo2 fs-6 fw-bold text-dark text-bg-ligth rounded btn border-black border-2'>
-                        Histórico de Perguntas e Respostas:
+                              className='titulo2 fs-6 fw-bold text-dark text-bg-ligth rounded badge '>
+                        Histórico de Perguntas<br/> e Respostas:
                         </span > 
                             <hr />  
                             <ScrollPanel style={{ width: '100%', height: '300px' }} className="custombar2">
@@ -111,13 +107,13 @@ function ChatGPT() {
                                 <div className="input-group mt-3">
                                     <input
                                         type="text"
-                                        className="input-group-prepend form-control border-black border-1"
+                                        className="input-group-prepend form-control"
                                         placeholder="Digite a sua pergunta..."
                                         value={userQuestion}
                                         onChange={handleQuestionChange}
                                         onKeyDown={handleKeyDown}
                                     />
-                                    <button id="btnEnviarPergunta" className="p-inputgroup-addon btn bg-verde border-black border-1" type="button" onClick={handleSendQuestion}>Enviar</button>
+                                    <button id="btnEnviarPergunta" className="p-inputgroup-addon btn bg-verde" type="button" onClick={handleSendQuestion}>Enviar</button>
                                 </div>
                             </div>
                         </article>
