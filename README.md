@@ -1,5 +1,7 @@
 Universidade São Judas Tadeu - São Paulo.
+
 Curso: Análise de Desenvolvimento de Sistemas
+
 PROJETO FINAL A3 - 3º Semestre
 
 Integrantes: 
