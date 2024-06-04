@@ -11,7 +11,7 @@ function Home () {
         dadosIntegrantes: [
             {
                 name: 'Felipe Magalhães de Araujo Carneiro',
-                funcao: 'Desenvolvedor Back-End',
+                funcao: 'Desenvolvedor Full-stack',
                 registroAluno: '823119685',
                 foto: 'https://avatars.githubusercontent.com/u/111382377?v=4https://media.licdn.com/dms/image/sync/D4D27AQEarNu0KEDG_g/articleshare-shrink_480/0/1712862278930?e=1718060400&v=beta&t=mcwbimiL7SAoS12epxTU9777D8oTBTPJsCiSr7qElNo'
             },
@@ -19,7 +19,7 @@ function Home () {
                 name: 'Murilo Matos Bernardo',
                 funcao: 'Desenvolvedor Full-stack',
                 registroAluno: '823132278',
-                foto: 'https://media.licdn.com/dms/image/D4D03AQGcDTavO8BmWQ/profile-displayphoto-shrink_800_800/0/1709588490055?e=1723075200&v=beta&t=y-MhoI01ysmobolaALp6ap1DB7CihwzFYYq65Nq8T_o'
+                foto: 'https://avatars.githubusercontent.com/u/94113139?v=4'
             },
             {
               name: 'Fadel Abbas Mzannar',
@@ -37,7 +37,7 @@ function Home () {
           name: 'Felipe Soares Lima',
           funcao: 'Desenvolvedor Front-End',
           registroAluno: '823127421',
-          foto: 'https://media.licdn.com/dms/image/D4D03AQGtio2RHi-QcQ/profile-displayphoto-shrink_200_200/0/1692134231757?e=1723075200&v=beta&t=XZjBY-76LOOOBk7YNerrBGhnMyxmuuA_XfWTHj_lOHM'
+          foto: 'https://avatars.githubusercontent.com/u/165835933?v=4'
       },
       {
         name: 'Analice Souza de Almeida Silva',
@@ -49,7 +49,7 @@ function Home () {
       name: 'Lucas Cezar Alcala Zenteno',
       funcao: 'Desenvolvedor Front-End ',
       registroAluno: '823144811',
-      foto:'https://media.licdn.com/dms/image/D4D03AQG37LSQ55ga0w/profile-displayphoto-shrink_100_100/0/1717457666699?e=1723075200&v=beta&t=Ki_SoubVqQVOfHNGsGhWxDRVua1y032A6bKGQIa06Gk'
+      foto:'https://avatars.githubusercontent.com/u/125783397?v=4'
   },
 
 
