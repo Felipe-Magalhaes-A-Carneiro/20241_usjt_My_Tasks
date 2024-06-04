@@ -1,5 +1,8 @@
-PROJETO A3 
+Universidade São Judas Tadeu - São Paulo.
+Curso: Análise de Desenvolvimento de Sistemas
+PROJETO FINAL A3 - 3º Semestre
 
+Integrantes: 
 Felipe Magalhães de Araujo Carneiro
 RA: 823119685
 email: felipe.araujo.arq@outlook.com
