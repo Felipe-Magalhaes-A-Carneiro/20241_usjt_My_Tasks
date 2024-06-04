@@ -31,7 +31,7 @@ function Home () {
             name: 'Gustavo Evangelista Cardoso',
             funcao: 'Desenvolvedor Front-End',
             registroAluno: '823129532',
-            foto: 'https://media.licdn.com/dms/image/D4D03AQHOAGe_7oPnDw/profile-displayphoto-shrink_800_800/0/1714087117333?e=1723075200&v=beta&t=ETdpe_8g69whXWR6FUXT2M5qSkfw9Ysb7USVsBjkOIM'
+            foto: 'https://avatars.githubusercontent.com/u/107882018?v=4'
         },
         {
           name: 'Felipe Soares Lima',
