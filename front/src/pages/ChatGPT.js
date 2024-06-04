@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ScrollPanel } from 'primereact/scrollpanel';
-import Navbar from '../components/Navbar';
+import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
 import '../App.css';
 
@@ -57,7 +57,7 @@ function ChatGPT() {
 
     return (
         <div>
-            <Navbar />
+            <NavBar />
             <div className="container my-4 min-vw-100 my-5 text-center">
                 <span  className=' fs-3 fw-bold my-5 mb-4 mt-4 p-3 text-dark text-bg-light rounded widthTitle badge border-black border-3'>
                     Estude com o ChatGPT

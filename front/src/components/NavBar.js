@@ -4,7 +4,7 @@ import { TbBrandOpenai } from "react-icons/tb";
 import '../App.css';
 
 
-function Navbar() {
+function NavBar() {
   return (
     <nav className="fixed-top navbar navbar-expand-lg navbar-light bg-light">
 
@@ -48,4 +48,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default NavBar;

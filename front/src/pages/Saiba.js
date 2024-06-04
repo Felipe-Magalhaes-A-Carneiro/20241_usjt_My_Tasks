@@ -1,5 +1,5 @@
 import React from 'react' 
-import Navbar from '../components/Navbar'
+import NavBar from '../components/NavBar'
 import Footer from '../components/Footer'
 import Cards from '../components/Cards'
 import '../App.css' 
@@ -59,7 +59,7 @@ function Home () {
 
     return (
     <div>
-      <Navbar />
+      <NavBar />
 
       <main className='container my-4 min-vw-100'> 
         <div className='container text-center'> 

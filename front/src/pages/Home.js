@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Navbar from "../components/Navbar";
+import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import "../App.css";
 import { FaComputer } from "react-icons/fa6";
@@ -9,7 +9,7 @@ import { GiProcessor } from "react-icons/gi";
 function Home() {
   return (
     <div>
-      <Navbar />
+      <NavBar />
 
       <main className="container my-4 min-vw-100">
         <br />
