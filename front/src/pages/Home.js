@@ -17,6 +17,7 @@ function Home() {
           <span className="badge fs-3 fw-bold my-5 mb-4 mt-4 p-3 text-dark text-bg-light rounded widthTitle">
             Aprenda Programação com ChatGPT
           </span>
+          <br />
           <span className="titulo2 badge fs-5 fw-bold my-5 mb-4 mt-4 p-3  rounded">
             Faça suas perguntas, salve respostas e faça anotações!
           </span>
