@@ -18,7 +18,7 @@ function Home() {
             Aprenda Programação com ChatGPT
           </span>
           <span className="titulo2 badge fs-5 fw-bold my-5 mb-4 mt-4 p-3  rounded">
-            Faça perguntas, salve respostas e faça anotações!
+            Faça suas perguntas, salve respostas e faça anotações!
           </span>
           <br />
           <FaComputer

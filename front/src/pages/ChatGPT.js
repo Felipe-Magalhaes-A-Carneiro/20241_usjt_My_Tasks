@@ -68,7 +68,7 @@ function ChatGPT() {
                     <aside className="col-md-3 mb-5 ">
                         <div className="card p-4 md-5 mb-5 my-5 ">
                         <span style={{ width: '100%'}} 
-                              className='titulo2 fs-6 fw-bold text-dark text-bg-ligth rounded badge '>
+                              className='titulo2 fs-6 fw-bold text-dark text-dark-emphasis rounded badge '>
                         Histórico de Perguntas<br/> e Respostas:
                         </span > 
                             <hr />  
@@ -97,7 +97,7 @@ function ChatGPT() {
 
                     <main className="col-md-6 ">
                         <article className="card mb-5 my-5">
-                            <div className="p-5 text-dark-emphasis bg-body border border-dark-subtle rounded-3">
+                            <div className="p-5 fw-bold text-dark-emphasis bg-body border border-dark-subtle rounded-3">
                                 <h5>Resposta do ChatGPT:</h5>
                                 {response && (
                                     <ScrollPanel style={{ width: '100%', height: 'auto' }} className="custombar1">

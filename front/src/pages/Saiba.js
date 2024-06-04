@@ -33,7 +33,7 @@ function Home () {
         <div className='container text-center'> 
 
           
-          <p className="badge fs-2 fw-bold my-4 mb-5 mt-5 p-3 text-dark text-bg-light rounded widthTitle">Sobre nós</p>
+          <p className="badge fs-2 fw-bold my-4 mb-5 mt-5 p-3 text-dark text-bg-light rounded widthTitle">saiba mais</p>
 
         {/* Card Murilo */}
         <div className="row">
