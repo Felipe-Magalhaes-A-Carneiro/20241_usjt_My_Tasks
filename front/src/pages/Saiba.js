@@ -4,7 +4,7 @@ import Footer from '../components/Footer'
 import Cards from '../components/Cards'
 import '../App.css' 
 
-function Home () {
+function Saiba () {
 
     /* Adicione os integrantes no elemento abaixo */
     const integrantes = {
@@ -92,4 +92,4 @@ function Home () {
   )
 }
 
-export default Home
+export default Saiba
