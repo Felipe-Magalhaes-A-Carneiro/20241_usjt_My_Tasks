@@ -4,7 +4,7 @@ import '../App.css';
 
 function Footer() {
   return (
-<footer className='fixed-bottom'>
+<footer className='min-vw-100'>
     <div className='bg-light pb-2'>
         <div className='container text-center pt-1'>
             <div className='row'>
