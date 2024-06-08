@@ -43,13 +43,19 @@ html, body {
   }
 
   .dataPergunta{
-    font-size: 50%;
+    font-size: 70%;
     font-weight: bold;
   }
 
   .conteudoRetornado{
-    font-size: 70%;
+    font-size: 90%;
   }
   .labelPerguntaHistorico{
     font-size: 80%;
+  }
+  footer {
+    bottom: 0;
+    width: 100%;
+    background-color: #f1f1f1;
+    text-align: center;
   }

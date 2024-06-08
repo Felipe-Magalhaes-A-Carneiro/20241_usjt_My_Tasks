@@ -54,6 +54,7 @@ function Home() {
               Aproveite essa ferramenta inteligente para aprimorar suas
               habilidades de programação de maneira prática e eficiente.
             </p>
+            
           </div>
         </div>
       </main>

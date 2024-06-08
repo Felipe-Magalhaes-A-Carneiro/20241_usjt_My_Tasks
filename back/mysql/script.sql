@@ -31,7 +31,7 @@ create table if not exists tb_respostas(
     foreign key (id_pergunta) references tb_perguntas(id_pergunta) 
 );
 
---altera coluna
+-- altera coluna
 ALTER TABLE tb_perguntas
 ADD COLUMN data_pergunta TIMESTAMP DEFAULT CURRENT_TIMESTAMP;
 -- visualizar tabela:
