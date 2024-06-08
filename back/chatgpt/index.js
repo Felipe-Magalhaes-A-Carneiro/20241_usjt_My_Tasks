@@ -37,7 +37,7 @@ app.post('/pergunte-ao-chatgpt', async (req, res) => {
     const role = "user"
     const max_tokens = 200 //Controla o número de caracteres e será alterado pelo 'limit_response'
     const model = 'gpt-3.5-turbo' // Versão do ChatGPT
-    const limit_response = 'Para o seguinte texto, elabore uma resposta com no máximo 200 caractéres' // Criado para mandar uma mensagem ao OpenAI Obs.: que não é obrigatorio
+    const limit_response = 'Sou um estudante de programação novato, para o seguinte texto, elabore uma resposta com no máximo 200 caractéres de forma clara para um leigo' // Criado para mandar uma mensagem ao OpenAI Obs.: que não é obrigatorio mas definirá o perfil do usuário e o texto tenha o tamanho certo.
 
     // Faz a solicitação à API do OpenAI.:
     try {
