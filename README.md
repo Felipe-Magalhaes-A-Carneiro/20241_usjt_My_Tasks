@@ -4,7 +4,7 @@ Curso: Análise de Desenvolvimento de Sistemas
 
 PROJETO FINAL A3 - 3º Semestre
 
-"My Tasks" - Projeto Final do 3º Semestre, na Universidade São Judas Tadeu, SP.
+"My Tasks"
 
 My Tasks é uma API inovadora projetada para facilitar a gestão de tarefas, integrando diretamente com o ChatGPT para proporcionar uma experiência de usuário interativa e eficiente. A ideia central do projeto é utilizar essa Aplicação em escolas, afim de permitir que os usuários estudem, utilizando perguntas e recebam respostas em tempo real, enquanto todas as interações são armazenadas na página do usuário e isso ocorre de maneira segura em um banco de dados MySQL.
 
